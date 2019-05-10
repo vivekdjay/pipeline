@@ -6,7 +6,8 @@ pipeline
       stage('one')
       {
       steps {
-      echo 'hi , HELLO WORLD!!!' }
+      echo 'hi , HELLO WORLD!!!'
+      }
       }
       stage('two')
       {
@@ -16,11 +17,11 @@ pipeline
       stage('three')
       {
       parallel {
-        stage(UT) {
+        stage('UT') {
             steps { 
                 echo 'UNIT TESTING' }
           } 
-      stage(IT) {
+      stage('IT') {
           steps {
               echo 'INTEGRATION TESTING' }
               }
